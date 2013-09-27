@@ -226,9 +226,6 @@
     <Content Include="Content\font\Quicksand_Light_Oblique-webfont.svg" />
     <Content Include="Content\font\Quicksand_Light_Oblique-webfont.ttf" />
     <Content Include="Content\font\Quicksand_Light_Oblique-webfont.woff" />
-    <Content Include="Web.AppSettings.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Views\Shared\GoogleMaps.cshtml" />
   </ItemGroup>
   <ItemGroup>
