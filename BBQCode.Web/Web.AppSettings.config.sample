@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<appSettings>
+  <add key="webpages:Version" value="1.0.0.0"/>
+  <add key="ClientValidationEnabled" value="true"/>
+  <add key="UnobtrusiveJavaScriptEnabled" value="false"/>
+
+  <add key="Email.SmtpHost" value="smtp.gmail.com"/>
+  <add key="Email.SmtpPort" value="587"/>
+  <add key="Email.SmtpUsername" value="gateway@bbqcode.com"/>
+  
+  <add key="Email.ContactUsFullname" value="BBQCode ContactUs"/>
+  <add key="Email.ContactUsEmail" value="contact@bbqcode.com"/>
+
+  <add key="Twitter.UriFeed" value="http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=bbqcode"/>
+  <add key="Twitter.CachedMinutes" value="30"/>
+</appSettings>
