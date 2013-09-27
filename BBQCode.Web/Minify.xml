@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://yuicompressor.codeplex.com/wikipage?title=Sample%20MSBuild.xml%20File&;amp;amp;amp;amp;amp;ProjectName=yuicompressor -->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <UsingTask
+        TaskName="CompressorTask"
+        AssemblyFile="$(ProjectDir)..\_Libraries\Yahoo.Yui.Compressor.dll" />
+
+    <!-- Define the output locations. These can be set via the msbuild command line using
+         /p:SourceLocation="$(ProjectDir)"
+         /p:CssOutputFile=$(ProjectDir)../whatever...
+         /p:JavaScriptOutputFile=$(ProjectDir)../whatever...
+         
+         If they are not supplied or are empty, then we the value whatever is supplied, below.
+    -->
+    <PropertyGroup>
+		<ContentLocation>$(ProjectDir)Content</ContentLocation>
+		<CssLocation>$(ContentLocation)/css</CssLocation>
+		<JsLocation>$(ContentLocation)/js</JsLocation>
+        <CssOutputFile Condition=" '$(CssOutputFile)'=='' ">$(CssLocation)/bbqcode.min.css</CssOutputFile>
+        <JavaScriptOutputFile Condition=" '$(JavaScriptOutputFile)'=='' ">$(JsLocation)/bbqcode.min.js</JavaScriptOutputFile>
+    </PropertyGroup>
+    
+    
+    <Target Name="Minify">
+        <!--
+            ItemGroup\CssFiles or ItemGroup\JavaScriptFiles: add zero to many files you wish to include in this compression task.
+                                                             Don't forget, you can use the wildcard (eg. *.css, *.js) if you feel up to it.
+                                                             Finally, at least one item is required - either a css file or a js file.
+                                                             
+            CssFiles/JavaScriptFiles data format: Please do not touch this.
+            DeleteCssFiles: [Optional] True | Yes | Yeah | Yep | True | FoSho | Fo Sho. Default is False. Anything else is False. (eg. blah = false, xxxx111 = false, etc)
+            CssCompressionType: YuiStockCompression | MichaelAshsRegexEnhancements | HaveMyCakeAndEatIt or BestOfBothWorlds or Hybrid; Default is YuiStockCompression.
+            ObfuscateJavaScript: [Optional] refer to DeleteCssFiles, above.
+            PreserveAllSemicolons: [Optional] refer to DeleteCssFiles, above.
+            DisableOptimizations: [Optional] refer to DeleteCssFiles, above.
+            EncodingType: [Optional] ASCII, BigEndianUnicode, Unicode, UTF32, UTF7, UTF8, Default. Default is 'Default'.
+            DeleteJavaScriptFiles: [Optional] refer to DeleteCssFiles, above.
+            LineBreakPosition: [Optional] the position where a line feed is appened when the next semicolon is reached. Default is -1 (never add a line break).
+                               0 (zero) means add a line break after every semicolon. (This might help with debugging troublesome files).          
+            LoggingType: None | ALittleBit | HardcoreBringItOn;  Hardcore also lists javascript verbose warnings, if there are any (and there usually is :P ).
+            ThreadCulture: [Optional] the culture you want the thread to run under. Default is 'en-gb'.
+            IsEvalIgnored: [Optional] compress any functions that contain 'eval'. Default is False, which means a function that contains
+                           'eval' will NOT be compressed. It's deemed risky to compress a function containing 'eval'. That said,
+                           if the usages are deemed safe this check can be disabled by setting this value to True.
+        -->
+        <ItemGroup>
+            <!-- Single files, listed in order of dependency -->
+            <CssFiles Include="$(CssLocation)/960.css"/>
+            <CssFiles Include="$(CssLocation)/reset.css"/>
+            <CssFiles Include="$(CssLocation)/site.css"/>
+            
+			<JavaScriptFiles Include="$(JsLocation)/libs/jquery-1.5.1.min.js"/>
+			<JavaScriptFiles Include="$(JsLocation)/libs/jquery.scrollfollow.js"/>
+			<JavaScriptFiles Include="$(JsLocation)/libs/easing.js"/>
+			<JavaScriptFiles Include="$(JsLocation)/libs/jsCarousel.js"/>
+            <JavaScriptFiles Include="$(JsLocation)/core/core.js"/>
+			<JavaScriptFiles Include="$(JsLocation)/core/contactUs.js"/>
+			<JavaScriptFiles Include="$(JsLocation)/core/projects.js"/>
+
+            
+            <!-- All the files. They will be handled (I assume) in alphabetically. -->
+            <!-- <CssFiles Include="$(SourceLocation)*.css" />
+            <JavaScriptFiles Include="$(SourceLocation)*.js" />
+            -->
+            
+        </ItemGroup>
+        <CompressorTask
+            CssFiles="@(CssFiles)"
+            DeleteCssFiles="false"
+            CssOutputFile="$(CssOutputFile)"
+            CssCompressionType="YuiStockCompression"
+            JavaScriptFiles="@(JavaScriptFiles)"
+            ObfuscateJavaScript="True"
+            PreserveAllSemicolons="False"
+            DisableOptimizations="Nope"
+            EncodingType="Default"
+            DeleteJavaScriptFiles="false"
+            LineBreakPosition="-1"
+            JavaScriptOutputFile="$(JavaScriptOutputFile)"
+            LoggingType="ALittleBit"
+            ThreadCulture="en-CA"
+            IsEvalIgnored="false"
+            />
+    </Target>
+</Project>

@@ -1,0 +1,29 @@
+﻿@using BBQCode.Web.Models
+@model List<BBQCode.Web.Models.MemberModel>
+           
+@section slider{
+    <div id="title">
+        <div class="center_margin">
+            <h1>@Html.LocalizedTitle("ContentTitle")</h1>
+        </div>
+    </div>
+}
+
+
+<div id="mission">
+    <div class="alpha grid_4">
+        <blockquote>
+        <p class="quote">@Html.Localized("MissionQuote")</p>
+        </blockquote>
+    </div>
+    <div class="omega grid_8">
+        <p class="mission_text">@Html.Localized("MissionText1")</p>
+        <p class="mission_text">@Html.Localized("MissionText2")</p>
+    </div>
+</div>
+<div class="clear"></div>
+@foreach (MemberModel t in Model)
+{
+    @Html.Partial("Member", t)
+    <div class="clear"></div>
+}

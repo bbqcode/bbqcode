@@ -1,0 +1,68 @@
+﻿@model BBQCode.Web.Models.ProjectModel
+
+@section head
+{
+    @if (Html.IsDebug())
+    {
+        <script type="text/javascript" src="@Url.Content("~/Content/js/libs/jquery.scrollfollow.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/js/core/projects.js")"></script>
+    }
+}           
+@section slider{
+    <div id="title">
+        <div class="center_margin">
+            <h1>@Html.FirstWordTitle(@Model.Title)</h1>
+        </div>
+    </div>
+}
+<style type="text/css">
+    .projectPage 
+    {
+    	margin-top:  25px;
+    }
+    .projectImage
+    {
+        border: 1px solid #e5e5e5;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    .backToNavLink a
+    {
+        font-size: 1.3em;
+	    color: #2b2b2b;
+	    font-family: 'QuicksandBold' , Arial, sans-serif;
+        text-decoration: none;
+    }
+    .backToNavLink a:hover
+    {
+        text-decoration: underline;
+    }
+    .texting
+    {
+        position: relative;
+    }
+</style>
+<div class="projectPage">
+    <div id="@Model.Id" class="projectContainer">    
+        <div class="images grid_7 alpha">
+            @foreach (var screenshot in Model.Screenshots)
+            {
+                <img class="projectImage" src="@Url.Content(screenshot.ImagePath)" alt="@Html.Localized(screenshot.AltTextResourceName)" style="height: @screenshot.Height;width: @screenshot.Width;" />
+            }
+        </div>
+        <div class="texting grid_5 omega">
+            @foreach (var resourceName in Model.TextingResourceNames)
+            {
+                <p>@Html.Localized(resourceName)</p>
+            }
+        </div>
+        <div class="clear"></div>
+        <span class="backToNavLink">@Html.LocalizedLink("Projects", "BackToNav")</span>
+    </div>
+    <hr class="projectSeparator" />
+    <h3>
+        Any comments?</h3>
+    <p>
+        Have any comments for us? Do you like our projects or want us to realize your ideas?
+        @Html.ActionLink("Contact us", "contactus")!</p>
+</div>

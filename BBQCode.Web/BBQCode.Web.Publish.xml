@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://bbqcode.com:80/msdeployagentservice/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="BBQCode" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="False" profileName="BBQCode Publish" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="Administrator" savePWD="False" userPWD="" SelectedForPublish="True" />
+</publishData>

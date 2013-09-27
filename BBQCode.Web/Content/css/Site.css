@@ -1,0 +1,493 @@
+@font-face
+{
+	font-family: 'LeagueGothicRegular';
+	src: url('../font/League_Gothic-webfont.eot');
+	src: url('../font/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../font/League_Gothic-webfont.woff') format('woff'), url('../font/League_Gothic-webfont.ttf') format('truetype'), url('../font/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family: 'QuicksandBold';
+	src: url('../font/Quicksand_Bold-webfont.eot');
+	src: url('../font/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/Quicksand_Bold-webfont.woff') format('woff'), url('../font/Quicksand_Bold-webfont.ttf') format('truetype'), url('../font/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ----------------------------- */
+/* ---------- Element ---------- */
+/* ----------------------------- */
+
+body
+{
+	font-size: 12px;
+	color: #4b4b4b;
+	font-family: Tahoma, Arial, sans-serif;
+	background: #221f1f;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'LeagueGothicRegular' , Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px #4B4B4B;
+	text-transform: uppercase;
+}
+
+h1 
+{
+	line-height: 112px;
+	font-size: 4.8em;
+	color: #221f1f;
+	text-shadow: 1px 1px #f3f3f3;
+}
+
+h2
+{
+	font-size: 4em;
+}
+
+h3
+{
+	font-size: 2.5em;
+	color: #e94b14;
+}
+
+h4
+{
+	font-size: 1.1em;
+	height: 30px;
+	color: #2b2b2b;
+	font-family: 'QuicksandBold' , Arial, sans-serif;
+	text-shadow: 1px 1px #f3f3f3;
+}
+
+hr
+{
+	background-color: #8a8a8a;
+	height: 1px;
+	margin: 10px 2px;
+	box-shadow: 0 1px 0 #f9f9f9;
+}
+
+form
+{
+	padding-right: 20px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+form label
+{
+	display: block;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+form input[type=submit]
+{
+	display: block;
+}
+
+form input[type=text], form textarea
+{
+	width: 100%;
+	background-color: #fbfbfb;
+	border: 1px solid #d4d2d2;
+	padding: 4px;
+}
+
+form input[type=text]
+{
+	margin-bottom: 10px;
+}
+
+form textarea
+{
+	height: 100px;
+}
+
+form input[type=submit]
+{
+	display: inline;
+	background: #ffffff;
+	color: #221f1f;
+	border: 0px;
+	font-size: 1.8em;
+	font-variant: small-caps;
+	font-weight: bold;
+	margin-left: 20px;
+	position: relative;
+	top: 2px;
+}
+
+form input[type=submit]:hover
+{
+	color: #e94b14;
+	cursor: pointer;
+	text-shadow: 1px 1px #4B4B4B;
+	top: 1px;
+}
+
+div.inline input[type=text]
+{
+	width: 60px;
+	margin-left: 10px;
+}
+
+div.inline label
+{
+	display: inline;
+}
+
+div.inline
+{
+	margin-top: 12px;
+}
+
+blockquote
+{
+	padding: 20px;
+	color: #e94b14;
+	background: url('../img/quote_up.png') top left no-repeat;
+}
+
+/* --------------------------- */
+/* ---------- Class ---------- */
+/* --------------------------- */
+
+.center_margin
+{
+	margin: 0 auto;
+	width: 960px;
+}
+
+.firstWordTitle
+{
+	color: #e94b14;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.padded
+{
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.padded p
+{
+	font-size: 1.2em;
+	margin-bottom: 2px;
+}
+
+.coopMember 
+{
+	margin-top: 20px;
+}
+
+.coopMember img
+{
+	margin-top: 5px;
+	height: 140px;
+	width: 220px;
+}
+
+.mission_text
+{
+	font-size: 1.2em;
+	line-height: 1.3em;
+	margin: 0 10px 1.6em 0;
+}
+
+.quote
+{
+	padding: 0px 20px 0px 0px;
+	font-size: 2.2em;
+	font-weight: bold;
+	text-align: left;
+	background: url('../img/quote_down.png') bottom right no-repeat;
+}
+
+.dashed 
+{
+	border-top: 1px dotted #c1c1c1;	
+}
+
+.media_wrapper 
+{
+	padding: 10px 0;	
+}
+
+.media_icon
+{
+	float: left;
+}
+
+.media_text
+{
+	float: left;
+}
+
+.media_text
+{
+	float: left;
+	padding-left: 5px;
+	font-size: 1.4em;
+}
+
+.media_text span
+{
+	display: block;
+	color: #919191;
+	font-style: italic;
+	margin-top: 4px;
+	font-size: 0.8em;
+}
+
+/* ------------------------- */
+/* ---------- Id ---------- */
+/* ------------------------ */
+
+#title 
+{
+	height: 112px;
+	border: 1px solid #adadad;
+	background: url('../img/bg_slider.png') repeat-x;	
+}
+
+#header
+{
+	background-color: #221f1f;
+	color: #fff;
+	padding: 0 10px;
+	height: 100px;
+	font-size: 1.4em;
+}
+
+#logo
+{
+	width: 122px;
+	height: 86px;
+	margin-top: 6px;
+	float: left;
+	background: url('../img/logo_small.png');
+}
+
+#nav-menu
+{
+	height: 63px;
+	float: right;
+	padding-top: 37px;
+	font-family: 'QuicksandBold' , Arial, sans-serif;
+}
+
+#nav-menu a
+{
+	color: #fefefe;
+	text-shadow: 1px 1px #141414;
+	text-decoration: none;
+}
+
+#nav-menu li
+{
+	height: 32px;
+	margin: 0 5px;
+	padding: 0 10px;
+	list-style: none;
+	float: left;
+	-webkit-border-radius: 3px 8px;
+	-moz-border-radius: 3px 8px;
+	border-radius: 3px 8px;
+}
+
+#nav-menu li span
+{
+	display: block;
+	padding-top: 5px;
+}
+
+#nav-menu li:hover
+{
+	background-color: #e94b14;
+}
+
+#nav-menu a.current
+{
+	border-bottom: 2px solid #e94b14;
+}
+
+#content
+{
+	background: #fefefe;
+	padding-bottom: 25px;
+}
+
+#prefooter
+{
+	height: 15px;
+	background: #d2d2d2;
+}
+
+#footer
+{
+	color: #f4f4f4;
+	background: #221f1f;
+	height: 245px;
+	text-shadow: 1px 1px #4b4b4b;
+	padding-top: 10px;
+}
+
+#footer li
+{
+	list-style: none;
+	padding-left: 2px;
+	margin: 4px;
+}
+
+#footer h3
+{
+	color: #f4f4f4;
+	font-size: 2em;
+}
+
+#footer a
+{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+#footer a:hover
+{
+	color: #eeeeee;
+	font-weight: bold;
+}
+
+#slider
+{
+	height: 300px;
+	border: 1px solid #adadad;
+	background: url('../img/bg_slider.png') repeat-x;
+}
+
+#slider .arrow
+{
+	position: absolute;
+	top: 46%;
+	width: 30px;
+	height: 30px;
+	z-index: 999;
+	background-image: url('../img/arrow.png');
+	cursor: pointer;
+}
+
+#prev
+{
+	background-position: 0 0;
+	left: 0px;
+}
+
+#next
+{
+	background-position: 30px 0;
+	right: 0px;
+}
+
+#prev:hover
+{
+	background-position: 0px 30px;
+}
+
+#next:hover
+{
+	background-position: 30px 30px;
+}
+
+#slider div
+{
+	width: 960px;
+	height: 300px;
+}
+
+#slider h2
+{
+	text-align: right;
+	color: #221f1f;
+	position: relative;
+	font-size: 3.16em;
+	text-shadow: 1px 1px #f3f3f3;
+	width: 90%;
+}
+
+#website
+{
+	background: url('../img/slider_website.png');
+}
+
+#coop
+{
+	background: url('../img/slider_website.png');
+}
+
+#welcome h1
+{
+	line-height: 80px;
+}
+
+#welcome p 
+{
+	font-size: 1.3em;	
+}
+
+#subnav
+{
+	padding-top: 15px;
+}
+
+#subnav h4 
+{
+	font-size: 1.8em;
+	text-transform: none;
+	height: 35px;
+	color: #2b2b2b;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+#successBox, #errorBox
+{
+	min-height: 32px;
+	width: 300px;
+	background-color: #B2FF95;
+	margin: 8px 0;
+	padding: 5px;
+	border: 1px solid #BFBFBF;
+	box-shadow: 1px 1px 1px black;
+}
+
+#successBox span, #errorBox span
+{
+	font-weight: bold;
+	position: relative;
+	margin-left: 6px;
+	top: 2px
+}
+
+#errorBox
+{
+	background-color: #EB1800;
+}
+
+#mission 
+{
+	margin-top: 25px;
+}
+
+#googleMap
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

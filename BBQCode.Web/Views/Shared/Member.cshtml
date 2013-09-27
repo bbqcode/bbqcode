@@ -1,0 +1,13 @@
+﻿@model BBQCode.Web.Models.MemberModel
+
+<div class="coopMember">
+    <div class="grid_3 alpha teamMember">
+        <img class="picTeam" src="@Url.Content("~/Content/img/team/" + Model.PathImg + ".jpg")" alt="@Model.FullName" />
+        <img class="altTeam" src="@Url.Content("~/Content/img/team/" + Model.PathImg + "_alt.jpg")" alt="@Model.FullName" style="display: none" />
+    </div>
+    <div class="grid_9  omega">
+        <h3>@Model.FullName</h3>
+        <h4>@Html.Localized(Model.Job)</h4>
+        <p>@Html.Localized(Model.TextResourceName)</p>
+    </div>
+</div>

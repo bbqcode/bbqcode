@@ -1,0 +1,66 @@
+﻿@model BBQCode.Web.Models.ContactUsModel
+@section head
+{
+    @if (Html.IsDebug())
+    {
+        <script type="text/javascript" src="@Url.Content("~/Content/js/core/contactUs.js")"></script>
+    }
+}
+@section slider{
+    <div id="title">
+        <div class="center_margin">
+            <h1>@Html.LocalizedTitle("ContentTitle")</h1>
+        </div>
+    </div>
+}
+<div class="grid_6 alpha">
+    <div class="padded">
+        <p>
+            @Html.Localized("MainMessage")
+        </p>
+        <div id="successBox" style="display: none;">
+            <img src="@Url.Content("~/Content/img/thumb-up-icon.png")" alt="Success" />
+            <span>@Html.Localized("SuccessReceivedEmail")</span>
+        </div>
+        <div id="errorBox" style="display: none;">
+            <img src="@Url.Content("~/Content/img/Close-icon.png")" alt="Error" />
+            <span>@Html.Localized("ErrorSendEmail")
+            </span>
+        </div>
+        @using (Html.BeginForm())
+        {
+            <label for="FullName">@Html.Localized("LabelFullName")</label>
+            @Html.TextBoxFor(model => model.FullName)
+            <label for="Email">@Html.Localized("LabelEmail")</label>
+            @Html.TextBoxFor(model => model.Email)
+            <label for="Message">@Html.Localized("LabelMessage")</label>
+            @Html.TextAreaFor(model => model.Message)
+            <div class="inline">
+                <label for="Answer">@Html.DisplayFor(Model => Model.Question)</label>
+                @Html.TextBoxFor(model => model.Answer)
+                <input type="submit" value="@Html.Localized("SubmitContactUs")" />
+            </div>
+            @Html.HiddenFor(model => model.QuestionPartOne)
+            @Html.HiddenFor(model => model.QuestionPartTwo)
+            <div class="hidden">
+                <label for="DoNotFillThis">@Html.Localized("LabelDoNotFillThis")</label>
+                @Html.TextBoxFor(model => model.DoNotFillThis)
+            </div>   
+        }
+    </div>
+</div>
+<div class="grid_6 omega">
+    <div class="padded">
+        <p>
+            @Html.RawLocalized("OurEmail")
+        </p>
+        <p>
+            @Html.RawLocalized("PhoneNumber")
+        </p>
+        <hr />
+        <p>
+            @Html.RawLocalized("Location")
+        </p>
+        @Html.Partial("GoogleMaps")
+    </div>
+</div>
