@@ -77,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\960.css" />
-    <Content Include="Content\css\bbqcode.min.css" />
     <Content Include="Content\css\reset.css" />
     <Content Include="Content\css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -141,7 +140,6 @@
     <Content Include="Content\img\team\av_simon_g.jpg" />
     <Content Include="Content\img\team\av_simon_g_alt.jpg" />
     <Content Include="Content\img\thumb-up-icon.png" />
-    <Content Include="Content\js\bbqcode.min.js" />
     <Content Include="Content\js\core\contactUs.js" />
     <Content Include="Content\js\core\core.js" />
     <Content Include="Content\js\core\projects.js" />
