@@ -5,8 +5,4 @@
 **/*.orig
 _ReSharper**
 **.ReSharper.user
-BBQCode.Web/Content/Css/bbqcode.min.css
-BBQCode.Web/Content/Js/bbqcode.min.js
-BBQCode.Web/Content/css/bbqcode.min.css
-BBQCode.Web/Content/js/bbqcode.min.js
 BBQCOde.Web/Web.AppSettings.config
